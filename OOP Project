@@ -1,0 +1,135 @@
+package currencyconverter;
+
+import java.util.*;
+import java.text.DecimalFormat;
+
+
+public class CurrencyConverter {
+
+    
+    public static void main(String[] args) {
+        double amount, dollar, pound, code, euro, rupees, ringgit, taka;
+        DecimalFormat f = new DecimalFormat("##.##");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hi, Welcome to the Currency Converter!");
+ 
+		System.out.println("Which currency You want to Convert ? ");
+		
+		System.out.println("1:Taka \t2:Dollar \t3:Pound \n4:Euro \t5:Rupee \t6:Ringgit ");
+		code = sc.nextInt();
+		
+		System.out.println("How much Money you want to convert ?");
+		amount = sc.nextFloat();
+ 
+		// For taka amounts Conversion
+		if (code == 1) {
+ 
+			dollar = amount / 0.012;
+			System.out.println("Your " + amount + " Taka is : " + f.format(dollar) + " Dollar");
+ 
+			pound = amount / 0.0089;
+			System.out.println("Your " + amount + " Taka is : " + f.format(pound) + " Pound");
+ 
+			euro = amount / 0.011;
+			System.out.println("Your " + amount + " Taka is : " + f.format(euro) + " Euro");
+ 
+			rupees = amount / 0.054;
+			System.out.println("Your " + amount + " Taka is : " + f.format(rupees) + " Rupee");
+ 
+			ringgit = amount / 0.049;
+			System.out.println("Your " + amount + " Taka is : " + f.format(ringgit) + " ringgit");
+		} else if (code == 2) {
+			// For Dollar Conversion
+ 
+			taka = amount * 86.32;
+			System.out.println("Your " + amount + " Dollar is : " + f.format(taka) + " Taka");
+ 
+			pound = amount * 0.77;
+			System.out.println("Your " + amount + " Dollar is : " + f.format(pound) + " Pound");
+ 
+			euro = amount * 0.92;
+			System.out.println("Your " + amount + " Dollar is : " + f.format(euro) + " Euro");
+ 
+			rupees = amount * 75.92;
+			System.out.println("Your " + amount + " Dollar is : " + f.format(rupees) + " Rupee");
+ 
+			ringgit = amount * 4.22;
+			System.out.println("Your " + amount + " Dollar is : " + f.format(ringgit) + " ringgit");
+		} else if (code == 3) {
+			// For Pound Conversion
+ 
+			taka = amount * 112.37;
+			System.out.println("Your " + amount + " pound is : " + f.format(taka) + " Taka");
+ 
+			dollar = amount * 1.30;
+			System.out.println("Your " + amount + " pound is : " + f.format(dollar) + " Dollar");
+ 
+			euro = amount * 1.20;
+			System.out.println("Your " + amount + " pound is : " + f.format(euro) + " Euro");
+ 
+			rupees = amount * 98.83;
+			System.out.println("Your " + amount + " pound is : " + f.format(rupees) + " Rupee");
+ 
+			ringgit = amount * 5.50;
+			System.out.println("Your " + amount + " pound is : " + f.format(ringgit) + " ringgit");
+		} else if (code == 4) {
+			// For Euro Conversion
+ 
+			taka = amount * 93.88;
+			System.out.println("Your " + amount + " euro is : " + f.format(taka) + " Taka");
+ 
+			dollar = amount * 1.09;
+			System.out.println("Your " + amount + " euro is : " + f.format(dollar) + " Dollar");
+ 
+			pound = amount * 0.84;
+			System.out.println("Your " + amount + " euro is : " + f.format(pound) + " Pound");
+ 
+			rupees = amount * 82.57;
+			System.out.println("Your " + amount + " euro is : " + f.format(rupees) + " Rupee");
+ 
+			ringgit = amount * 4.60;
+			System.out.println("Your " + amount + " euro is : " + f.format(ringgit) + " ringgit");
+		} else if (code == 5) {
+ 
+			// For rupees Conversion
+ 
+			taka = amount * 1.14;
+			System.out.println("Your " + amount + " rupees is : " + f.format(taka) + " Taka");
+ 
+			dollar = amount * 0.013;
+			System.out.println("Your " + amount + " rupees is : " + f.format(dollar) + " Dollar");
+ 
+			pound = amount * 0.010;
+			System.out.println("Your " + amount + " rupees is : " + f.format(pound) + " Pound");
+ 
+			euro = amount * 0.012;
+			System.out.println("Your " + amount + " rupees is : " + f.format(euro) + " Rupee");
+ 
+			ringgit = amount * 0.056;
+			System.out.println("Your " + amount + " rupees is : " + f.format(ringgit) + " ringgit");
+		} else if (code == 6) {
+			// For Ringgit Conversion
+ 
+			taka = amount * 20.45;
+			System.out.println("Your " + amount + " ringgit is : " + f.format(taka) + " Taka");
+ 
+			dollar = amount * 0.24;
+			System.out.println("Your " + amount + " ringgit is : " + f.format(dollar) + " dollar");
+ 
+			pound = amount * 0.18;
+			System.out.println("Your " + amount + " ringgit is : " + f.format(pound) + " pound");
+ 
+			euro = amount * 0.22;
+			System.out.println("Your " + amount + " ringgit is : " + f.format(euro) + " euro");
+ 
+			rupees = amount * 17.98;
+			System.out.println("Your " + amount + " ringgit is : " + f.format(rupees) + " Rupee");
+		} else {
+			System.out.println("Invalid input");
+		}
+		
+		System.out.println("Thank you for choosing our Programs");
+	}
+ 
+}
+  
